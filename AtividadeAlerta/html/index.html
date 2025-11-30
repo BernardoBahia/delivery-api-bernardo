@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Três Botões Bonitos</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1f1f1f, #3f3f3f);
+      font-family: Arial, sans-serif;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .button-container a {
+      text-decoration: none;
+      padding: 15px 30px;
+      background-color: #ff9800;
+      color: white;
+      border-radius: 8px;
+      font-size: 18px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .button-container a:hover {
+      background-color: #f57c00;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="button-container">
+    <a href="./notify.html">Notify</a>
+    <a href="./sweetaler.html">Sweetalert</a>
+    <a href="./toastr.html">toastr</a>
+  </div>
+</body>
+
+</html>

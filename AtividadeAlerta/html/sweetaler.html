@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botões Temáticos</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1f1f1f, #3f3f3f);
+      font-family: Arial, sans-serif;
+      gap: 30px;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s, transform 0.2s;
+      cursor: pointer;
+    }
+
+    .button-success {
+      background-color: #4CAF50;
+    }
+
+    .button-success:hover {
+      background-color: #43A047;
+      transform: translateY(-3px);
+    }
+
+    .button-info {
+      background-color: #2196F3;
+    }
+
+    .button-info:hover {
+      background-color: #1976D2;
+      transform: translateY(-3px);
+    }
+
+    .button-alerta {
+      background-color: #FFC107;
+      color: #000;
+    }
+
+    .button-alerta:hover {
+      background-color: #FFA000;
+      transform: translateY(-3px);
+    }
+
+    .button-erro {
+      background-color: #F44336;
+    }
+
+    .button-erro:hover {
+      background-color: #D32F2F;
+      transform: translateY(-3px);
+    }
+
+    .button-voltar {
+      background-color: #9E9E9E;
+    }
+
+    .button-voltar:hover {
+      background-color: #757575;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="button-container">
+    <button class="button-success" onclick="showScessAlert()">Sucesso</button>
+    <button class="button-info" onclick="showInfoAlert()">Info</button>
+    <button class="button-alerta" onclick="showWarningAlert()">Alerta</button>
+    <button class="button-erro" onclick="showErrorAlert()">Erro</button>
+  </div>
+  <button class="button-voltar" onclick="history.back()">Voltar</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+
+    function showScessAlert() {
+      Swal.fire({
+        title: 'Sucesso!',
+        text: 'Ação realizada com sucesso.',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      });
+    }
+    function showInfoAlert() {
+      Swal.fire({
+        title: 'Informação',
+        text: 'Aqui está uma informação importante.',
+        icon: 'info',
+        confirmButtonText: 'OK'
+      });
+    }
+    function showWarningAlert() {
+      Swal.fire({
+        title: 'Alerta',
+        text: 'Cuidado com esta ação.',
+        icon: 'warning',
+        confirmButtonText: 'OK'
+      });
+    }
+    function showErrorAlert() {
+      Swal.fire({
+        title: 'Erro',
+        text: 'Ocorreu um erro.',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
+    }
+
+  </script>
+
+</body>
+
+</html>
